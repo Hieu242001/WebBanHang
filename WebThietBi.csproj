@@ -1,0 +1,533 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4717BD2D-FF43-4415-B7EA-E24CC9B612BC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebThietBi</RootNamespace>
+    <AssemblyName>WebThietBi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44366</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Front-end\assets\css\home.css" />
+    <Content Include="Front-end\assets\image\diengiadung01.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung012.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung013.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung02.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung022.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung023.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung03.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung032.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung033.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung04.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung042.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung043.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung05.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung052.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung053.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung06.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung062.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung063.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung07.jpg" />
+    <Content Include="Front-end\assets\image\diengiadung08.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai01.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai012.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai013.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai02.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai022.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai023.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai03.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai032.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai033.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai04.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai042.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai043.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai05.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai052.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai053.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai06.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai062.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai063.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai07.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai072.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai073.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai08.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai082.jpg" />
+    <Content Include="Front-end\assets\image\dienthoai083.jpg" />
+    <Content Include="Front-end\assets\image\laptop01.jpg" />
+    <Content Include="Front-end\assets\image\laptop012.jpg" />
+    <Content Include="Front-end\assets\image\laptop013.jpg" />
+    <Content Include="Front-end\assets\image\laptop02.jpg" />
+    <Content Include="Front-end\assets\image\laptop022.jpg" />
+    <Content Include="Front-end\assets\image\laptop023.jpg" />
+    <Content Include="Front-end\assets\image\laptop03.jpg" />
+    <Content Include="Front-end\assets\image\laptop032.jpg" />
+    <Content Include="Front-end\assets\image\laptop033.jpg" />
+    <Content Include="Front-end\assets\image\laptop04.jpg" />
+    <Content Include="Front-end\assets\image\laptop042.jpg" />
+    <Content Include="Front-end\assets\image\laptop043.jpg" />
+    <Content Include="Front-end\assets\image\laptop05.jpg" />
+    <Content Include="Front-end\assets\image\laptop052.jpg" />
+    <Content Include="Front-end\assets\image\laptop053.jpg" />
+    <Content Include="Front-end\assets\image\laptop06.jpg" />
+    <Content Include="Front-end\assets\image\laptop062.jpg" />
+    <Content Include="Front-end\assets\image\laptop063.jpg" />
+    <Content Include="Front-end\assets\image\laptop07.jpg" />
+    <Content Include="Front-end\assets\image\laptop072.jpg" />
+    <Content Include="Front-end\assets\image\laptop073.jpg" />
+    <Content Include="Front-end\assets\image\laptop08.jpg" />
+    <Content Include="Front-end\assets\image\laptop082.jpg" />
+    <Content Include="Front-end\assets\image\laptop083.jpg" />
+    <Content Include="Front-end\assets\image\maygiat01.jpg" />
+    <Content Include="Front-end\assets\image\maygiat02.jpg" />
+    <Content Include="Front-end\assets\image\maygiat022.jpg" />
+    <Content Include="Front-end\assets\image\maygiat03.jpg" />
+    <Content Include="Front-end\assets\image\maygiat032.jpg" />
+    <Content Include="Front-end\assets\image\maygiat033.jpg" />
+    <Content Include="Front-end\assets\image\maygiat04.jpg" />
+    <Content Include="Front-end\assets\image\maygiat042.jpg" />
+    <Content Include="Front-end\assets\image\maygiat043.jpg" />
+    <Content Include="Front-end\assets\image\maygiat05.jpg" />
+    <Content Include="Front-end\assets\image\maygiat052.jpg" />
+    <Content Include="Front-end\assets\image\maygiat053.jpg" />
+    <Content Include="Front-end\assets\image\maygiat06.jpg" />
+    <Content Include="Front-end\assets\image\maygiat062.jpg" />
+    <Content Include="Front-end\assets\image\maygiat063.jpg" />
+    <Content Include="Front-end\assets\image\maygiat07.jpg" />
+    <Content Include="Front-end\assets\image\maygiat072.jpg" />
+    <Content Include="Front-end\assets\image\maygiat073.jpg" />
+    <Content Include="Front-end\assets\image\maygiat08.jpg" />
+    <Content Include="Front-end\assets\image\maygiat082.jpg" />
+    <Content Include="Front-end\assets\image\maygiat083.jpg" />
+    <Content Include="Front-end\assets\image\maygiay023.jpg" />
+    <Content Include="Front-end\assets\image\maylanh01.jpg" />
+    <Content Include="Front-end\assets\image\maylanh012.jpg" />
+    <Content Include="Front-end\assets\image\maylanh013.jpg" />
+    <Content Include="Front-end\assets\image\maylanh02.jpg" />
+    <Content Include="Front-end\assets\image\maylanh022.jpg" />
+    <Content Include="Front-end\assets\image\maylanh023.jpg" />
+    <Content Include="Front-end\assets\image\maylanh03.jpg" />
+    <Content Include="Front-end\assets\image\maylanh032.jpg" />
+    <Content Include="Front-end\assets\image\maylanh033.jpg" />
+    <Content Include="Front-end\assets\image\maylanh04.jpg" />
+    <Content Include="Front-end\assets\image\maylanh042.jpg" />
+    <Content Include="Front-end\assets\image\maylanh043.jpg" />
+    <Content Include="Front-end\assets\image\maylanh05.jpg" />
+    <Content Include="Front-end\assets\image\maylanh052.jpg" />
+    <Content Include="Front-end\assets\image\maylanh053.jpg" />
+    <Content Include="Front-end\assets\image\maylanh06.jpg" />
+    <Content Include="Front-end\assets\image\maylanh062.png" />
+    <Content Include="Front-end\assets\image\maylanh063.jpg" />
+    <Content Include="Front-end\assets\image\maylanh07.jpg" />
+    <Content Include="Front-end\assets\image\maylanh072.jpg" />
+    <Content Include="Front-end\assets\image\maylanh073.jpg" />
+    <Content Include="Front-end\assets\image\maylanh08.jpg" />
+    <Content Include="Front-end\assets\image\maylanh082.jpg" />
+    <Content Include="Front-end\assets\image\maylanh083.jpg" />
+    <Content Include="Front-end\assets\image\phukien01.jpg" />
+    <Content Include="Front-end\assets\image\phukien012.jpg" />
+    <Content Include="Front-end\assets\image\phukien013.jpg" />
+    <Content Include="Front-end\assets\image\phukien02.jpg" />
+    <Content Include="Front-end\assets\image\phukien022.jpg" />
+    <Content Include="Front-end\assets\image\phukien023.jpg" />
+    <Content Include="Front-end\assets\image\phukien03.jpg" />
+    <Content Include="Front-end\assets\image\phukien032.jpg" />
+    <Content Include="Front-end\assets\image\phukien033.jpg" />
+    <Content Include="Front-end\assets\image\phukien04.jpg" />
+    <Content Include="Front-end\assets\image\phukien042.jpg" />
+    <Content Include="Front-end\assets\image\phukien043.jpg" />
+    <Content Include="Front-end\assets\image\phukien05.jpg" />
+    <Content Include="Front-end\assets\image\phukien052.jpg" />
+    <Content Include="Front-end\assets\image\phukien053.jpg" />
+    <Content Include="Front-end\assets\image\phukien06.jpg" />
+    <Content Include="Front-end\assets\image\phukien062.jpg" />
+    <Content Include="Front-end\assets\image\phukien063.jpg" />
+    <Content Include="Front-end\assets\image\phukien07.jpg" />
+    <Content Include="Front-end\assets\image\phukien072.jpg" />
+    <Content Include="Front-end\assets\image\phukien073.jpg" />
+    <Content Include="Front-end\assets\image\phukien08.jpg" />
+    <Content Include="Front-end\assets\image\phukien082.jpg" />
+    <Content Include="Front-end\assets\image\phukien083.jpg" />
+    <Content Include="Front-end\assets\image\tulan05.jpg" />
+    <Content Include="Front-end\assets\image\tulanh01.jpg" />
+    <Content Include="Front-end\assets\image\tulanh012.jpg" />
+    <Content Include="Front-end\assets\image\tulanh013.jpg" />
+    <Content Include="Front-end\assets\image\tulanh02.jpg" />
+    <Content Include="Front-end\assets\image\tulanh022.jpg" />
+    <Content Include="Front-end\assets\image\tulanh023.jpg" />
+    <Content Include="Front-end\assets\image\tulanh03.jpg" />
+    <Content Include="Front-end\assets\image\tulanh032.jpg" />
+    <Content Include="Front-end\assets\image\tulanh033.jpg" />
+    <Content Include="Front-end\assets\image\tulanh04.jpg" />
+    <Content Include="Front-end\assets\image\tulanh042.jpg" />
+    <Content Include="Front-end\assets\image\tulanh043.jpg" />
+    <Content Include="Front-end\assets\image\tulanh05.jpg" />
+    <Content Include="Front-end\assets\image\tulanh052.jpg" />
+    <Content Include="Front-end\assets\image\tulanh053.jpg" />
+    <Content Include="Front-end\assets\image\tulanh06.jpg" />
+    <Content Include="Front-end\assets\image\tulanh062.jpg" />
+    <Content Include="Front-end\assets\image\tulanh063.jpg" />
+    <Content Include="Front-end\assets\image\tulanh07.jpg" />
+    <Content Include="Front-end\assets\image\tulanh072.jpg" />
+    <Content Include="Front-end\assets\image\tulanh073.jpg" />
+    <Content Include="Front-end\assets\image\tulanh08.jpg" />
+    <Content Include="Front-end\assets\image\tulanh082.jpg" />
+    <Content Include="Front-end\assets\image\tulanh083.jpg" />
+    <Content Include="Front-end\assets\image\tv01.jpg" />
+    <Content Include="Front-end\assets\image\tv012.jpg" />
+    <Content Include="Front-end\assets\image\tv013.jpg" />
+    <Content Include="Front-end\assets\image\tv02.jpg" />
+    <Content Include="Front-end\assets\image\tv022.jpg" />
+    <Content Include="Front-end\assets\image\tv023.jpg" />
+    <Content Include="Front-end\assets\image\tv03.jpg" />
+    <Content Include="Front-end\assets\image\tv032.jpg" />
+    <Content Include="Front-end\assets\image\tv033.jpg" />
+    <Content Include="Front-end\assets\image\tv04.jpg" />
+    <Content Include="Front-end\assets\image\tv042.jpg" />
+    <Content Include="Front-end\assets\image\tv043.jpg" />
+    <Content Include="Front-end\assets\image\tv05.jpg" />
+    <Content Include="Front-end\assets\image\tv052.jpg" />
+    <Content Include="Front-end\assets\image\tv053.jpg" />
+    <Content Include="Front-end\assets\image\tv06.jpg" />
+    <Content Include="Front-end\assets\image\tv062.jpg" />
+    <Content Include="Front-end\assets\image\tv063.jpg" />
+    <Content Include="Front-end\assets\image\tv07.jpg" />
+    <Content Include="Front-end\assets\image\tv072.jpg" />
+    <Content Include="Front-end\assets\image\tv073.jpg" />
+    <Content Include="Front-end\assets\image\tv08.jpg" />
+    <Content Include="Front-end\assets\image\tv082.jpg" />
+    <Content Include="Front-end\assets\image\tv083.jpg" />
+    <Content Include="Front-end\assets\image\tv73.jpg" />
+    <Content Include="Front-end\js\AboutUs.js" />
+    <Content Include="Front-end\js\HDB.js" />
+    <Content Include="Front-end\js\index.js" />
+    <Content Include="Front-end\js\login.js" />
+    <Content Include="Front-end\js\cart.js" />
+    <Content Include="Front-end\js\product-details.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Front-end\404.html" />
+    <Content Include="Front-end\about.html" />
+    <Content Include="Front-end\assets\css\animate.css" />
+    <Content Include="Front-end\assets\css\bootstrap.min.css" />
+    <Content Include="Front-end\assets\css\font.awesome.css" />
+    <Content Include="Front-end\assets\css\jquery-ui.min.css" />
+    <Content Include="Front-end\assets\css\magnific-popup.css" />
+    <Content Include="Front-end\assets\css\owl.carousel.min.css" />
+    <Content Include="Front-end\assets\css\plugins.css" />
+    <Content Include="Front-end\assets\css\slick.css" />
+    <Content Include="Front-end\assets\css\slinky.menu.css" />
+    <Content Include="Front-end\assets\css\style.css" />
+    <Content Include="Front-end\assets\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Front-end\assets\fonts\plaza-icon56cc.svg" />
+    <Content Include="Front-end\assets\img\about\about-us-policy-bg.jpg" />
+    <Content Include="Front-end\assets\img\about\about-us-signature.png" />
+    <Content Include="Front-end\assets\img\about\about1.jpg" />
+    <Content Include="Front-end\assets\img\about\about2.jpg" />
+    <Content Include="Front-end\assets\img\about\about3.jpg" />
+    <Content Include="Front-end\assets\img\about\about4.jpg" />
+    <Content Include="Front-end\assets\img\about\About_icon1.png" />
+    <Content Include="Front-end\assets\img\about\About_icon2.png" />
+    <Content Include="Front-end\assets\img\about\About_icon3.png" />
+    <Content Include="Front-end\assets\img\about\shipping1.png" />
+    <Content Include="Front-end\assets\img\about\shipping2.png" />
+    <Content Include="Front-end\assets\img\about\shipping3.png" />
+    <Content Include="Front-end\assets\img\about\testimonial1.png" />
+    <Content Include="Front-end\assets\img\about\testimonial2.png" />
+    <Content Include="Front-end\assets\img\about\testimonial3.png" />
+    <Content Include="Front-end\assets\img\about\testimonials-icon.png" />
+    <Content Include="Front-end\assets\img\bg\banner1.jpg" />
+    <Content Include="Front-end\assets\img\bg\banner2.jpg" />
+    <Content Include="Front-end\assets\img\bg\banner3.jpg" />
+    <Content Include="Front-end\assets\img\bg\banner4.jpg" />
+    <Content Include="Front-end\assets\img\bg\banner5.jpg" />
+    <Content Include="Front-end\assets\img\bg\banner6.jpg" />
+    <Content Include="Front-end\assets\img\bg\banner7.jpg" />
+    <Content Include="Front-end\assets\img\bg\bkg_top_vogue2.png" />
+    <Content Include="Front-end\assets\img\bg\img-top-vogue3.png" />
+    <Content Include="Front-end\assets\img\bg\signature.png" />
+    <Content Include="Front-end\assets\img\blog\blog-big1.jpg" />
+    <Content Include="Front-end\assets\img\blog\blog-big2.jpg" />
+    <Content Include="Front-end\assets\img\blog\blog-big3.jpg" />
+    <Content Include="Front-end\assets\img\blog\blog-big4.jpg" />
+    <Content Include="Front-end\assets\img\blog\blog-big5.jpg" />
+    <Content Include="Front-end\assets\img\blog\blog1.jpg" />
+    <Content Include="Front-end\assets\img\blog\blog12.jpg" />
+    <Content Include="Front-end\assets\img\blog\blog13.jpg" />
+    <Content Include="Front-end\assets\img\blog\blog14.jpg" />
+    <Content Include="Front-end\assets\img\blog\blog15.jpg" />
+    <Content Include="Front-end\assets\img\blog\blog2.jpg" />
+    <Content Include="Front-end\assets\img\blog\blog3.jpg" />
+    <Content Include="Front-end\assets\img\blog\blogpage1.jpg" />
+    <Content Include="Front-end\assets\img\blog\blogpage2.jpg" />
+    <Content Include="Front-end\assets\img\blog\blogpage3.jpg" />
+    <Content Include="Front-end\assets\img\blog\blogpage4.jpg" />
+    <Content Include="Front-end\assets\img\blog\blogpage5.jpg" />
+    <Content Include="Front-end\assets\img\blog\blogpage6.jpg" />
+    <Content Include="Front-end\assets\img\blog\comment2.jpg" />
+    <Content Include="Front-end\assets\img\blog\comment2.png.jpg" />
+    <Content Include="Front-end\assets\img\blog\comment3.png.jpg" />
+    <Content Include="Front-end\assets\img\brand\brand1.png" />
+    <Content Include="Front-end\assets\img\brand\brand2.png" />
+    <Content Include="Front-end\assets\img\brand\brand3.png" />
+    <Content Include="Front-end\assets\img\brand\brand4.png" />
+    <Content Include="Front-end\assets\img\brand\brand5.png" />
+    <Content Include="Front-end\assets\img\brand\brand6.png" />
+    <Content Include="Front-end\assets\img\favicon.ico" />
+    <Content Include="Front-end\assets\img\icon\bkg_grid.png" />
+    <Content Include="Front-end\assets\img\icon\bkg_grid4.png" />
+    <Content Include="Front-end\assets\img\icon\bkg_grid4_hover.png" />
+    <Content Include="Front-end\assets\img\icon\bkg_grid_hover.png" />
+    <Content Include="Front-end\assets\img\icon\bkg_list.png" />
+    <Content Include="Front-end\assets\img\icon\bkg_list_hover.png" />
+    <Content Include="Front-end\assets\img\icon\icon-app.jpg" />
+    <Content Include="Front-end\assets\img\icon\icon1-app.jpg" />
+    <Content Include="Front-end\assets\img\icon\owl.video.play.png" />
+    <Content Include="Front-end\assets\img\icon\papyel.png" />
+    <Content Include="Front-end\assets\img\icon\payment.png" />
+    <Content Include="Front-end\assets\img\logo\logo.png" />
+    <Content Include="Front-end\assets\img\product\product1.jpg" />
+    <Content Include="Front-end\assets\img\product\product10.jpg" />
+    <Content Include="Front-end\assets\img\product\product11.jpg" />
+    <Content Include="Front-end\assets\img\product\product12.jpg" />
+    <Content Include="Front-end\assets\img\product\product2.jpg" />
+    <Content Include="Front-end\assets\img\product\product3.jpg" />
+    <Content Include="Front-end\assets\img\product\product4.jpg" />
+    <Content Include="Front-end\assets\img\product\product5.jpg" />
+    <Content Include="Front-end\assets\img\product\product6.jpg" />
+    <Content Include="Front-end\assets\img\product\product7.jpg" />
+    <Content Include="Front-end\assets\img\product\product8.jpg" />
+    <Content Include="Front-end\assets\img\product\product9.jpg" />
+    <Content Include="Front-end\assets\img\product\productbig1.jpg" />
+    <Content Include="Front-end\assets\img\product\productbig2.jpg" />
+    <Content Include="Front-end\assets\img\product\productbig3.jpg" />
+    <Content Include="Front-end\assets\img\product\productbig4.jpg" />
+    <Content Include="Front-end\assets\img\s-product\product.jpg" />
+    <Content Include="Front-end\assets\img\s-product\product2.jpg" />
+    <Content Include="Front-end\assets\img\s-product\product3.jpg" />
+    <Content Include="Front-end\assets\img\service\services1.jpg" />
+    <Content Include="Front-end\assets\img\service\services2.jpg" />
+    <Content Include="Front-end\assets\img\service\services3.jpg" />
+    <Content Include="Front-end\assets\img\service\services4.jpg" />
+    <Content Include="Front-end\assets\img\slider\slider1.jpg" />
+    <Content Include="Front-end\assets\img\slider\slider10.jpg" />
+    <Content Include="Front-end\assets\img\slider\slider11.jpg" />
+    <Content Include="Front-end\assets\img\slider\slider12.jpg" />
+    <Content Include="Front-end\assets\img\slider\slider2.jpg" />
+    <Content Include="Front-end\assets\img\slider\slider3.jpg" />
+    <Content Include="Front-end\assets\img\slider\slider4.jpg" />
+    <Content Include="Front-end\assets\img\slider\slider5.jpg" />
+    <Content Include="Front-end\assets\img\slider\slider6.jpg" />
+    <Content Include="Front-end\assets\img\slider\slider7.jpg" />
+    <Content Include="Front-end\assets\img\slider\slider8.jpg" />
+    <Content Include="Front-end\assets\img\slider\slider9.jpg" />
+    <Content Include="Front-end\assets\js\bootstrap.min.js" />
+    <Content Include="Front-end\assets\js\isotope.pkgd.min.js" />
+    <Content Include="Front-end\assets\js\jquery.countdown.js" />
+    <Content Include="Front-end\assets\js\jquery.counterup.min.js" />
+    <Content Include="Front-end\assets\js\jquery.elevatezoom.js" />
+    <Content Include="Front-end\assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="Front-end\assets\js\jquery.ui.js" />
+    <Content Include="Front-end\assets\js\main.js" />
+    <Content Include="Front-end\assets\js\map.js" />
+    <Content Include="Front-end\assets\js\owl.carousel.min.js" />
+    <Content Include="Front-end\assets\js\plugins.js" />
+    <Content Include="Front-end\assets\js\popper.js" />
+    <Content Include="Front-end\assets\js\slick.min.js" />
+    <Content Include="Front-end\assets\js\slinky.menu.js" />
+    <Content Include="Front-end\assets\js\vendor\jquery-3.4.1.min.js" />
+    <Content Include="Front-end\assets\js\vendor\modernizr-3.7.1.min.js" />
+    <Content Include="Front-end\blog-details.html" />
+    <Content Include="Front-end\blog-fullwidth.html" />
+    <Content Include="Front-end\blog-sidebar.html" />
+    <Content Include="Front-end\blog.html" />
+    <Content Include="Front-end\cart.html" />
+    <Content Include="Front-end\checkout.html" />
+    <Content Include="Front-end\contact.html" />
+    <Content Include="Front-end\faq.html" />
+    <Content Include="Front-end\index-2.html" />
+    <Content Include="Front-end\index-3.html" />
+    <Content Include="Front-end\index-4.html" />
+    <Content Include="Front-end\index-5.html" />
+    <Content Include="Front-end\index.html" />
+    <Content Include="Front-end\login.html" />
+    <Content Include="Front-end\my-account.html" />
+    <Content Include="Front-end\product-details.html" />
+    <Content Include="Front-end\product-grouped.html" />
+    <Content Include="Front-end\product-sidebar.html" />
+    <Content Include="Front-end\services.html" />
+    <Content Include="Front-end\shop-fullwidth-list.html" />
+    <Content Include="Front-end\shop-fullwidth.html" />
+    <Content Include="Front-end\shop-left-sidebar.html" />
+    <Content Include="Front-end\shop-list.html" />
+    <Content Include="Front-end\shop-right-sidebar-list.html" />
+    <Content Include="Front-end\shop-right-sidebar.html" />
+    <Content Include="Front-end\shop.html" />
+    <Content Include="Front-end\variable-product.html" />
+    <Content Include="Front-end\wishlist.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AboutUsController.cs" />
+    <Compile Include="Controllers\BillController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\HDBController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
+    <Compile Include="Data\Customer.cs" />
+    <Compile Include="Data\HDB.cs" />
+    <Compile Include="Data\Product.cs" />
+    <Compile Include="Data\Comment.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ThietBi.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThietBi.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Front-end\assets\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Front-end\assets\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Front-end\assets\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Front-end\assets\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="Front-end\assets\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Front-end\assets\fonts\plaza-icon56cc.eot" />
+    <Content Include="Front-end\assets\fonts\plaza-icon56cc.ttf" />
+    <Content Include="Front-end\assets\fonts\plaza-icon56cc.woff" />
+    <Content Include="Models\ThietBi.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ThietBi.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Models\ThietBi.dbml.layout">
+      <DependentUpon>ThietBi.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50136</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44366/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
